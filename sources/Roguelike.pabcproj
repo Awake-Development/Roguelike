@@ -3,7 +3,6 @@
   <Items>
     <Item Type="SourceFile" Name="Roguelike.pas" Path="Roguelike.pas" />
     <Item Type="SourceFile" Name="types.pas" Path="types.pas" />
-    <Item Type="SourceFile" Name="controller.pas" Path="controller.pas" />
     <Item Type="SourceFile" Name="iostream.pas" Path="iostream.pas" />
     <Item Type="Reference" AssemblyName="System" FullAssemblyName="System.dll" />
   </Items>

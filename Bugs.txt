@@ -1,1 +1,1 @@
-1. При перемещении персонаж странно взаимодействует со стенами
+No there is no bugs. Let's wait a new version :D
