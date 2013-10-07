@@ -26,12 +26,8 @@ begin
 end;
 
 procedure moveObject(input: char; map: field; posX, posY: ^integer);
-var
-   prevX, prevY: integer;//предыдуща€ позици€ объекта (в классе объ€вление этих переменных скорее всего будет не нужно)
 begin
-   prevX := posX^;
-   prevY := posY^;
-   gotoxy(prevX, prevY);  
+   gotoxy(posX^, posY^);  
    write(' ');   
    
    case input of //осуществление изменени€ текущих координат

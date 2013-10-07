@@ -1,42 +1,33 @@
 //v. 0.0.1
 uses
-   crt, types, iostream;
+   crt, mapClass, actorClass;
 
 var
-   map: field;
-   input: char;
-   posX, posY: integer;
+   player: Actor;
+   level: Map := new Map();
 
 //временная процедура иницилизации карты, позже будет удалена (т.к. карта уровня будет иницилизироваться в функции-генераторе
 procedure mapInit ();
 var
-   i, j: integer;
-begin
-   for i := 1 to h do
-      for j := 1 to w do
-         map[i][j] := 0;
-   
-   for j := 1 to w do
+   i: integer;
+begin   
+   for i := 1 to 50 do
    begin;
-      map[1][j] := 1;
-      map[j][1] := 1;
-      map[h][j] := 1;
-      map[j][w] := 1;
+      level.setWall(i, 1);
+      level.setWall(1, i);
+      level.setWall(i, 50);
+      level.setWall(50, i);
    end;
 end;
 
 begin
-   posX := w div 2;//размещение игрока по центру карты
-   posY := h div 2;
-   input := #0;
    mapInit();
+   level.render();
+   player.setValues (25, 25, '@');
    
-   background(map);
-   
-   while (input <> #27) do //основной цикл игры
+   while (true) do //основной цикл игры
    begin
-      moveObject(input, map, @posX, @posY);
-      input := readkey;//считывание клавиши управления
+      player.moveActor(level);
    end;
    
 end.
