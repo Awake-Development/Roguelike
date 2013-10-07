@@ -1,7 +1,7 @@
 v0.0.1 (5.10.2013) - Added: ---
 		     Fixed: 
 			*moving into walls bug;
-	             Etc: 
+	             Other: 
 			*code refactoring;
 
 v0.0.0 (4.10.2013)- Just a roguish "Hello World!" with some (buggy) movement
