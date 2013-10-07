@@ -11,7 +11,7 @@ procedure mapInit ();
 var
    i: integer;
 begin   
-   for i := 1 to 50 do
+   for i := 1 to 50 do        // Расставляем крайние стены поля
    begin;
       level.setWall(i, 1);
       level.setWall(1, i);
